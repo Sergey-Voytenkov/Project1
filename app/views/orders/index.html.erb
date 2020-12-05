@@ -5,7 +5,6 @@
 <table>
   <thead>
     <tr>
-      <th>Id</th>
       <th>Name</th>
       <th>Email</th>
       <th>Description</th>
@@ -16,10 +15,9 @@
   <tbody>
     <% @orders.each do |order| %>
       <tr>
-        <td><%= order.ID %></td>
-        <td><%= order.Name %></td>
-        <td><%= order.Email %></td>
-        <td><%= order.Description %></td>
+        <td><%= order.name %></td>
+        <td><%= order.email %></td>
+        <td><%= order.description %></td>
         <td><%= link_to 'Show', order %></td>
         <td><%= link_to 'Edit', edit_order_path(order) %></td>
         <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
